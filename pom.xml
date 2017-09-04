@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.myself</groupId>
+  <artifactId>dms</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>dms</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>3.2.4.RELEASE</spring.version>
+    <dubbo-version>2.5.3</dubbo-version>
+    <javassist-version>3.15.0-GA</javassist-version>  
+    <netty-version>3.2.5.Final</netty-version>  
+    <zkclient-version>0.4</zkclient-version>
+    <zkclient-version>0.4</zkclient-version>  
+    <common-dbcp-version>1.4</common-dbcp-version>  
+    <deploy-version>0.0.1-SNAPSHOT</deploy-version>  
+    <zookeeper-version>3.4.6</zookeeper-version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+	    <groupId>javax.ws.rs</groupId>
+	    <artifactId>javax.ws.rs-api</artifactId>
+	    <version>2.1-m09</version>
+	</dependency>
+    <dependency>  
+        <groupId>org.springframework</groupId>  
+        <artifactId>spring-webmvc</artifactId>  
+        <version>${spring.version}</version>  
+    </dependency>
+    <!-- dubbo dependency -->  
+    <dependency>  
+        <groupId>com.alibaba</groupId>  
+        <artifactId>dubbo</artifactId>  
+        <version>${dubbo-version}</version>  
+        <exclusions>  
+            <exclusion>  
+                <artifactId>spring</artifactId>  
+                <groupId>org.springframework</groupId>  
+            </exclusion>  
+        </exclusions>  
+    </dependency>
+    <dependency>  
+       <groupId>org.javassist</groupId>  
+       <artifactId>javassist</artifactId>  
+       <version>${javassist-version}</version>  
+   </dependency>  
+   <dependency>  
+       <groupId>org.jboss.netty</groupId>  
+       <artifactId>netty</artifactId>  
+       <version>${netty-version}</version>  
+   </dependency>  
+   <dependency>  
+       <groupId>com.101tec</groupId>  
+       <artifactId>zkclient</artifactId>  
+       <version>${zkclient-version}</version>  
+   </dependency> 
+   <!-- zkclient需要依赖该jar -->  
+   <dependency>  
+       <groupId>org.apache.zookeeper</groupId>  
+       <artifactId>zookeeper</artifactId>  
+       <version>${zookeeper-version}</version>  
+   </dependency>  
+   <dependency>  
+       <groupId>javax.servlet</groupId>  
+       <artifactId>javax.servlet-api</artifactId>  
+       <version>3.1.0</version>  
+   </dependency>  
+   <dependency>  
+       <groupId>org.glassfish.grizzly</groupId>  
+       <artifactId>grizzly-core</artifactId>  
+       <version>2.1.4</version>  
+   </dependency>  
+   <dependency>  
+       <groupId>javax.cache</groupId>  
+       <artifactId>cache-api</artifactId>  
+       <version>0.4</version>  
+   </dependency>  
+   <dependency>  
+       <groupId>org.mortbay.jetty</groupId>  
+       <artifactId>jetty</artifactId>  
+       <version>6.1.26</version>  
+   </dependency>
+   <!-- https://mvnrepository.com/artifact/com.caucho/hessian -->
+	<dependency>
+	    <groupId>com.caucho</groupId>
+	    <artifactId>hessian</artifactId>
+	    <version>4.0.38</version>
+	</dependency>
+   <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-core -->
+<dependency>
+    <groupId>org.apache.cxf</groupId>
+    <artifactId>cxf-core</artifactId>
+    <version>3.0.4</version>
+</dependency>
+   
+  </dependencies>
+</project>
